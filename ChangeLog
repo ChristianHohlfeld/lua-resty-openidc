@@ -1,3 +1,22 @@
+03/27/2020
+- added optional support for RFC 7636 "Proof Key for Code Exchange"
+
+02/06/2020
+- ability to disable keepalive from lua-resty-http
+  By disabling keepalive we disable the native connection pool,
+  avoiding errors when dealing with invalid connections. This is 
+  specially useful when proxying ajax requests.
+
+02/05/2020
+- no longer echo the URI parameters back on default error page when
+  OIDC provider returns an error in call to redirect_uri; see #306;
+  thanks @barrelmaker97
+
+10/02/2019
+- when unauth_action is 'pass' and a token refresh fails the session
+  will get marked as no longer authenticated and a proper error is
+  returned; see #286; thanks @cretzel
+
 07/15/2019
 - release 1.7.2
 
